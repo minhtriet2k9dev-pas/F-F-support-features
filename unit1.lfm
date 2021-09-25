@@ -1,0 +1,402 @@
+object Form1: TForm1
+  Left = 545
+  Height = 831
+  Top = 12
+  Width = 1192
+  Caption = 'File and folder support  features'
+  ClientHeight = 831
+  ClientWidth = 1192
+  Color = clHighlight
+  OnClose = CloseClick
+  OnCreate = SetHP
+  Position = poDesktopCenter
+  LCLVersion = '2.2.0.1'
+  object StdFeatures: TGroupBox
+    Left = 16
+    Height = 329
+    Top = 150
+    Width = 449
+    Caption = 'Standard features'
+    ClientHeight = 302
+    ClientWidth = 445
+    Color = clMoneyGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object DelFiBt: TButton
+      Left = 224
+      Height = 90
+      Top = 24
+      Width = 180
+      Caption = 'Delete file'
+      OnClick = DelFiClick
+      TabOrder = 0
+    end
+    object AssFiBt: TButton
+      Left = 24
+      Height = 90
+      Top = 24
+      Width = 180
+      Caption = 'Create new file'
+      OnClick = AssFiClick
+      TabOrder = 1
+    end
+    object DelFoBt: TButton
+      Left = 224
+      Height = 90
+      Top = 168
+      Width = 180
+      Caption = 'Delete folder'
+      OnClick = DelFoldClick
+      TabOrder = 2
+    end
+    object AssFoBt: TButton
+      Left = 24
+      Height = 90
+      Top = 168
+      Width = 180
+      Caption = 'Create new folder'
+      OnClick = AssFoldClick
+      TabOrder = 3
+    end
+  end
+  object AdvFeatures: TGroupBox
+    Left = 512
+    Height = 464
+    Top = 150
+    Width = 657
+    Caption = 'Advance features'
+    ClientHeight = 437
+    ClientWidth = 653
+    Color = clMoneyGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object CopFiTFiBt: TButton
+      Left = 40
+      Height = 90
+      Top = 312
+      Width = 180
+      Caption = 'Copy file to file'
+      OnClick = CopyFileToFile
+      TabOrder = 0
+    end
+    object ReLoFiBt: TButton
+      Left = 40
+      Height = 90
+      Top = 168
+      Width = 180
+      Caption = 'Relocate file'
+      OnClick = ReLoFiClick
+      TabOrder = 1
+    end
+    object NFbt: TButton
+      Left = 440
+      Height = 90
+      Top = 24
+      Width = 180
+      Caption = 'New file from'
+      OnClick = NeFiClick
+      TabOrder = 2
+    end
+    object ReFiBt: TButton
+      Left = 40
+      Height = 90
+      Top = 24
+      Width = 180
+      Caption = 'Rewrite file'
+      OnClick = ReFiClick
+      TabOrder = 3
+    end
+    object ReNameF: TButton
+      Left = 240
+      Height = 90
+      Top = 24
+      Width = 180
+      Caption = 'Rename file'
+      OnClick = ReNaFiClick
+      TabOrder = 4
+    end
+    object ReNameFold: TButton
+      Left = 440
+      Height = 90
+      Top = 168
+      Width = 180
+      Caption = 'Rename folder'
+      OnClick = ReNameFoldClick
+      TabOrder = 5
+    end
+    object ReLoFoldBt: TButton
+      Left = 240
+      Height = 90
+      Top = 168
+      Width = 180
+      Caption = 'Relocate Folder'
+      OnClick = AAAreLoFoldClick
+      TabOrder = 6
+    end
+    object EmpFoldBt: TButton
+      Left = 240
+      Height = 90
+      Top = 312
+      Width = 180
+      Caption = 'Empty folder'
+      OnClick = EmpyfoldClick
+      TabOrder = 7
+    end
+    object CoPaBt: TButton
+      Left = 440
+      Height = 90
+      Top = 312
+      Width = 180
+      Caption = 'Copy/Paste file'
+      OnClick = CopasFiClick
+      TabOrder = 8
+    end
+    object Button2: TButton
+      Left = -96
+      Height = 25
+      Top = 24
+      Width = 75
+      Caption = 'Button2'
+      TabOrder = 9
+    end
+  end
+  object DepFN: TEdit
+    Left = 0
+    Height = 104
+    Top = 32
+    Width = 600
+    AutoSize = False
+    Color = clSilver
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnChange = EditChange
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DesFN: TEdit
+    Left = 600
+    Height = 104
+    Top = 32
+    Width = 600
+    AutoSize = False
+    Color = clSilver
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnChange = EditChange
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 28
+    Top = 0
+    Width = 118
+    Caption = 'DEPARTURE'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 1018
+    Height = 28
+    Top = 0
+    Width = 168
+    Caption = 'DESTINATION '
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -24
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object CusHP: TEdit
+    Left = 16
+    Height = 78
+    Top = 536
+    Width = 449
+    AutoSize = False
+    Color = clSilver
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 24
+    Top = 504
+    Width = 312
+    Caption = 'Custom your directory path'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 336
+    Height = 25
+    Top = 503
+    Width = 129
+    Caption = 'Save your custom path'
+    OnClick = SaveHPClick
+    TabOrder = 5
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 160
+    Top = 632
+    Width = 449
+    Caption = 'Setting'
+    Color = clMoneyGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 9
+  end
+  object NotBt: TButton
+    Left = 120
+    Height = 40
+    Top = 672
+    Width = 176
+    Caption = 'Notification :-ON'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnClick = OffNotClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object Button3: TButton
+    Left = 24
+    Height = 40
+    Top = 672
+    Width = 88
+    Caption = 'Reset'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnClick = ResetClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object PreMod: TButton
+    Left = 24
+    Height = 40
+    Top = 728
+    Width = 424
+    Caption = 'Autosave curent path(s) :-OFF'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnClick = SaveClick
+    ParentFont = False
+    TabOrder = 7
+  end
+  object GroupBox2: TGroupBox
+    Left = 512
+    Height = 160
+    Top = 632
+    Width = 657
+    Caption = 'TOOLS'
+    ClientHeight = 133
+    ClientWidth = 653
+    Color = clMoneyGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -19
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 10
+    object FileExBt: TButton
+      Left = 40
+      Height = 48
+      Top = 40
+      Width = 270
+      Caption = 'Check file(s) existence'
+      OnClick = CheckFileExist
+      TabOrder = 0
+    end
+    object Button4: TButton
+      Left = 350
+      Height = 48
+      Top = 40
+      Width = 270
+      Caption = 'Check folder(s) existence'
+      OnClick = CheckFoldExist
+      TabOrder = 1
+    end
+  end
+  object Button5: TButton
+    Left = 469
+    Height = 25
+    Top = 3
+    Width = 131
+    Caption = 'Some more details'
+    OnClick = DetailsClick
+    TabOrder = 11
+  end
+  object TrimBt: TButton
+    Left = 304
+    Height = 40
+    Top = 672
+    Width = 144
+    Caption = 'TrimSpace :-ON'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Consolas'
+    Font.Pitch = fpFixed
+    Font.Quality = fqDraft
+    OnClick = TrimClick
+    ParentFont = False
+    TabOrder = 12
+  end
+end
