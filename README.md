@@ -7,5 +7,5 @@ Please read the file Readme.txt :))
 
 #Project code in Lazarus (1000000 like for lazarus)
 
-IMPORTANT
-if u want to edit these files in lazarus, plz change the files's names from  "FileAndFoldeFeaturesSupport" to "FileAndFoldeSupportFeatures"
+IMPORTANT:
+if u want to edit these files in lazarus, plz change the files's names from  "FileAndFolderFeaturesSupport" to "FileAndFolderSupportFeatures"
