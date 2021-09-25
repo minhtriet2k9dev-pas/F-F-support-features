@@ -1,7 +1,10 @@
 @This is B.M.Triet's product, copyright 2021
 
-!!IMPORTANT: Make sure that you download the folder: "F&FSupportFeatures" in "Windows(C:)" disk!!
-!!IMPORTANT: Make sure that the folder: "F&FSupportFeatures" in "Windows(C:)" disk only contains 3 file:
+#######################################################################################################################
+#!!IMPORTANT: Make sure that you all the file and put it into the folder: "F&FSupportFeatures" in "Windows(C:)" disk!!#
+#######################################################################################################################
+
+!!IMPORTANT: Make sure that the folder: "F&FSupportFeatures" in "Windows(C:)" disk only contains 3 files:
 {
   +"FileAndFolderFeaturesSupport.exe"
   +"Homepath.txt"
